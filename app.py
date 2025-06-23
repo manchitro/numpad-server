@@ -80,7 +80,6 @@ def type_key(key):
         "Enter": Key.enter,
         "⌫": Key.backspace,
         "Backspace": Key.backspace,
-        "NumLock": Key.num_lock,
         "Enter": Key.enter,
         # You can add more mappings like "Tab": Key.tab, etc.
     }

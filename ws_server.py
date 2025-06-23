@@ -22,9 +22,12 @@ async def handle_connection(websocket, path):
 
             print(f"Received key: {key} for session: {session_id}")
             # Simulate keypress on the PC
-            if key == "⌫":
+            if key in ("⌫", "backspace"):
                 keyboard.press(Key.backspace)
                 keyboard.release(Key.backspace)
+            elif key in ("⏎", "enter", "return"):
+                keyboard.press(Key.enter)
+                keyboard.release(Key.enter)
             else:
                 keyboard.press(key)
                 keyboard.release(key)
